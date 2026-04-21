@@ -6,13 +6,13 @@
 #    By: edi-maio <edi-maio@42angouleme.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/17 17:10:17 by edi-maio          #+#    #+#              #
-#    Updated: 2026/04/02 19:54:00 by edi-maio         ###   ########.fr        #
+#    Updated: 2026/04/21 15:04:57 by edi-maio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ScavTrap
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp \
 		ClapTrap.cpp \

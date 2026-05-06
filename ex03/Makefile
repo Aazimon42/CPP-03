@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: edi-maio <edi-maio@42angouleme.fr>         +#+  +:+       +#+         #
+#    By: edi-maio <edi-maio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/17 17:10:17 by edi-maio          #+#    #+#              #
-#    Updated: 2026/04/21 15:05:06 by edi-maio         ###   ########.fr        #
+#    Updated: 2026/05/06 17:27:39 by edi-maio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = main.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
-.o: .cpp
+%.o: %.cpp
 	c++ $(CFLAGS) -c $< -o $@
 
 all: $(NAME)

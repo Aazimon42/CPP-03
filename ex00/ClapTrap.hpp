@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edi-maio <edi-maio@42angouleme.fr>         +#+  +:+       +#+        */
+/*   By: edi-maio <edi-maio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 15:18:56 by edi-maio          #+#    #+#             */
-/*   Updated: 2026/04/06 15:18:56 by edi-maio         ###   ########.fr       */
+/*   Updated: 2026/05/08 08:58:01 by edi-maio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@
 class ClapTrap
 {
     public:
+        ClapTrap();
         ClapTrap(std::string name);
+        ClapTrap(const ClapTrap& other);
         ~ClapTrap();
+        ClapTrap& operator=(const ClapTrap& other);
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);

@@ -3,14 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edi-maio <edi-maio@42angouleme.fr>         +#+  +:+       +#+        */
+/*   By: edi-maio <edi-maio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 15:21:17 by edi-maio          #+#    #+#             */
-/*   Updated: 2026/04/06 15:21:17 by edi-maio         ###   ########.fr       */
+/*   Updated: 2026/05/06 19:54:50 by edi-maio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap()
+{
+    this->name = "Default";
+    this->hitPoints = 10;
+    this->energyPoints = 10;
+    this->attackDamage = 0;
+    std::cout << "ClapTrap " << name << " created!" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string name)
 {
@@ -24,6 +33,25 @@ ClapTrap::ClapTrap(std::string name)
 ClapTrap::~ClapTrap()
 {
     std::cout << "ClapTrap " << this->name << " destroyed!" << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& other)
+{
+    this->name = other.name;
+    this->hitPoints = other.hitPoints;
+    this->energyPoints = other.energyPoints;
+    this->attackDamage = other.attackDamage;
+    std::cout << "ClapTrap " << name << " copied!" << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& other)
+{
+    this->name = other.name;
+    this->hitPoints = other.hitPoints;
+    this->energyPoints = other.energyPoints;
+    this->attackDamage = other.attackDamage;
+    std::cout << "ClapTrap " << name << " copied!" << std::endl;
+    return *this;
 }
 
 void ClapTrap::attack(const std::string& target)
